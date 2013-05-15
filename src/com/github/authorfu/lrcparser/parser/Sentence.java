@@ -70,7 +70,7 @@ public class Sentence implements Serializable{
 		boolean toTimeCheck=(toTime==-1||time<=toTime);
 		return fromTimeCheck&&toTimeCheck;
 	}
- 
+
 	public void setContent(String content){
 		this.content=content;
 	}

@@ -73,7 +73,6 @@ public class Test1{
 					 "[00:17.20]Line 2 lyrics\n"+
 					 "[00:21.10]Line 3 lyrics";
 		return new BufferedReader(new StringReader(lyric));
-		
 	}
 	
 	private BufferedReader getTestReader2(){

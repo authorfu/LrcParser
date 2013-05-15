@@ -77,7 +77,7 @@ public class Test1{
 	}
 	
 	private BufferedReader getTestReader2(){
-		String filename="src/com/github/authorfu/lrcparser/test/test1.lrc";
+		String filename="src/test/test1.lrc";
 		File file=new File(filename);
 		System.out.println("file existed? "+file.exists());
 		try{

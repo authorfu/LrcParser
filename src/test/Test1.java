@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.Hashtable;
 
 import com.github.authorfu.lrcparser.LrcParser;
+import com.github.authorfu.lrcparser.Lyric;
 import com.github.authorfu.lrcparser.parser.Sentence;
 
 public class Test1{
@@ -22,7 +23,7 @@ public class Test1{
 		Test1 test=new Test1();
 		try{
 			BufferedReader reader=test.getTestReader2();
-			test.parser=new LrcParser(reader);
+			test.parser=LrcParser.create(reader);
 		}catch(IOException e){
 			e.printStackTrace();
 		}
@@ -32,7 +33,7 @@ public class Test1{
 		test.testBase4();
 	}
 	
-	public LrcParser parser;
+	public Lyric parser;
 	private void testBase(){
 
 		String[] contents=parser.findAllContents();

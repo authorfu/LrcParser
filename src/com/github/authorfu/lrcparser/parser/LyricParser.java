@@ -31,9 +31,6 @@ public class LyricParser{
 	 */
 	private Pattern numberPattern;
 
-	private LyricParser(InputStream in){
-		this(new BufferedReader(new InputStreamReader(in)));
-	}
 
 	/**
 	 * need a reader to input content
@@ -80,10 +77,6 @@ public class LyricParser{
 		return create(parser);
 	}
 
-	public static LyricParser create(InputStream in) throws IOException{
-		LyricParser parser=new LyricParser(in);
-		return create(parser);
-	}
 
 	public ArrayList<Sentence> getSentences(){
 		return sentences;

@@ -18,7 +18,8 @@ public class Sentence implements Serializable{
 	private long fromTime=-1;// milliseconds, sentence start include
 	private long toTime=-1;// milliseconds,sentence end time include
 	private String content="";// content of the sentence
-
+	private int position=1;
+	
 	// private final static long DISAPPEAR_TIME = 1000L;//
 
 	public Sentence(long fromTime){
@@ -95,4 +96,14 @@ public class Sentence implements Serializable{
 		}
 
 	}
+
+	public int getPosition(){
+		return position;
+	}
+
+	public void setPosition(int position){
+		this.position=position;
+	}
+	
+	
 }

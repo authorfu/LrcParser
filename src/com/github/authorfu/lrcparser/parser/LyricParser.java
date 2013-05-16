@@ -70,6 +70,7 @@ public class LyricParser{
 		for(int i=0;i<sentences.size()-1;i++){
 			long toTime=sentences.get(i+1).getFromTime()-1;
 			sentences.get(i).setToTime(toTime);
+			sentences.get(i).setPosition(i);
 		}
 
 	}

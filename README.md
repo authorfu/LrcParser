@@ -27,7 +27,7 @@ result:
 > [{index:0|12000(Line 1 lyrics)17199}, {index:1|17200(Line 2 lyrics)21099}, {index:2|21100(Line 3 lyrics)-1}]
 
 #####Sentence
-a Sentence is a class which presents a line of lyric from `fromTime` to `toTime` filled by a `content` and  by a positioned by an `index` .
+a Sentence is a class which presents a line of lyric from `fromTime` to `toTime` filled by a `content` and positioned by an `index` .
 
 	private long fromTime=-1;// milliseconds, sentence start include
 	private long toTime=-1;// milliseconds,sentence end time include

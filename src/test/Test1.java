@@ -23,7 +23,7 @@ public class Test1{
 		Test1 test=new Test1();
 		try{
 			BufferedReader reader=test.getTestReader2();
-			test.parser=LrcParser.create(reader);
+			test.lyric=LrcParser.create(reader);
 		}catch(IOException e){
 			e.printStackTrace();
 		}
@@ -33,28 +33,28 @@ public class Test1{
 		test.testBase4();
 	}
 	
-	public Lyric parser;
+	public Lyric lyric;
 	private void testBase(){
 
-		String[] contents=parser.findAllContents();
-		System.out.println("length"+parser.getSentences().size());
+		String[] contents=lyric.findAllContents();
+		System.out.println("length"+lyric.getSentences().size());
 		System.out.println(Arrays.toString(contents));
 	}
 	
 	private void testBase2(){
-		System.out.println("length"+parser.getSentences().size());
-		System.out.println(parser.getSentences());
+		System.out.println("length"+lyric.getSentences().size());
+		System.out.println(lyric.getSentences());
 	}
 	
 	
 	private void testBase3(){
-		ArrayList<Sentence> sentences=parser.findAllSentences(-1,-1);
+		ArrayList<Sentence> sentences=lyric.findAllSentences(-1,-1);
 		System.out.println(sentences);
 	//	System.out.println(parser.findAllSentences(-1,30400));
 	}
 	
 	private void testBase4(){
-		Hashtable<String,String> tags=parser.getTags();
+		Hashtable<String,String> tags=lyric.getTags();
 		System.out.println(tags);
 	
 	}

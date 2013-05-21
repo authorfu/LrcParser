@@ -2,8 +2,6 @@ package com.github.authorfu.lrcparser.parser;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
@@ -17,20 +15,43 @@ import java.util.regex.Pattern;
  * @author authorfu
  */
 public class LyricParser{
+	/**
+	 * exception to indicate error to parse a line
+	 * 
+	 * @author authorfu
+	 */
+	private static class LyricParseException extends Exception{
+		private static final long serialVersionUID=-4668849369948178657L;
+
+		public LyricParseException(String line){
+			super(line);
+		}
+	}
+	public static LyricParser create(BufferedReader reader) throws IOException{
+		LyricParser parser=new LyricParser(reader);
+		return create(parser);
+	}
+	private static LyricParser create(LyricParser parser) throws IOException{
+		parser.parse();
+		parser.close();
+		return parser;
+	}
 	private BufferedReader reader;
+
 	/**
 	 * ID Tags [by:Creator of the LRC file] the key is "by" and the value "Creator of the LRC file"
 	 */
 	private Hashtable<String,String> tags;
+
 	/**
 	 * a list of Sentence which presents each line of LRC file
 	 */
 	private ArrayList<Sentence> sentences;
+
 	/**
 	 * pattern "[0-9]+"
 	 */
 	private Pattern numberPattern;
-
 
 	/**
 	 * need a reader to input content
@@ -44,8 +65,79 @@ public class LyricParser{
 		numberPattern=Pattern.compile("[0-9]+");
 	}
 
+	/**
+	 * @param line
+	 * @return the position of "]" in the line
+	 * @throws LyricParseException
+	 *             if "[" is not the begining and "]" is not found;
+	 */
+	private int checkLine(String line) throws LyricParseException{
+		if (line.length()<3||!"[".equals(line.substring(0,1))){
+			throw new LyricParseException(line);
+		}
+		int posBracketRight=line.indexOf("]");
+		if (posBracketRight<2){
+			throw new LyricParseException(line);
+		}
+		return posBracketRight;
+	}
+
 	public void close() throws IOException{
 		reader.close();
+	}
+
+	/**
+	 * 2 types of results: [by:Creator of the LRC file] => {"by","Creator of the LRC file"} [00:12.00]Line 1 lyrics
+	 * =>{"12000","Line 1 lyrics"} checked if "12000" is number;
+	 * 
+	 * @param line
+	 * @return
+	 * @throws LyricParseException
+	 */
+	private String[] extractTime(String line) throws LyricParseException{
+		int posBracketRight=checkLine(line);
+		String time=line.substring(1,posBracketRight);
+
+		String[] ts=time.split("\\:",2);
+		if (ts.length<2){
+			throw new LyricParseException(line);
+		}
+		String[] result=new String[2];
+		if (isNumber(ts[0])){
+			result[0]=parseTime(ts)+"";
+			result[1]=line.substring(posBracketRight+1);
+		}else if (!isNumber(ts[0])){
+			result=ts;
+		}
+		return result;
+	}
+
+	public ArrayList<Sentence> getSentences(){
+		return sentences;
+	}
+
+	public Hashtable<String,String> getTags(){
+		return tags;
+	}
+
+	private boolean isNumber(String str){
+		Matcher isNum=numberPattern.matcher(str);
+		return isNum.matches();
+	}
+
+	/**
+	 * sort sentences by starttime
+	 */
+	private void organize(){
+		Collections.sort(sentences,new Sentence.SentenceComparator());
+		int size=sentences.size();
+		for(int i=0;i<size;i++){
+			sentences.get(i).setIndex(i);
+			if (i<size-1){
+				long toTime=sentences.get(i+1).getFromTime()-1;
+				sentences.get(i).setToTime(toTime);
+			}
+		}
 	}
 
 	/**
@@ -60,32 +152,6 @@ public class LyricParser{
 			parseLine(temp.trim());
 		}
 		organize();
-	}
-
-	private void organize(){
-		Collections.sort(sentences,new Sentence.SentenceComparator());
-		for(int i=0;i<sentences.size()-1;i++){
-			long toTime=sentences.get(i+1).getFromTime()-1;
-			sentences.get(i).setToTime(toTime);
-			sentences.get(i).setPosition(i);
-		}
-
-	}
-
-	public static LyricParser create(BufferedReader reader) throws IOException{
-		LyricParser parser=new LyricParser(reader);
-		return create(parser);
-	}
-
-
-	public ArrayList<Sentence> getSentences(){
-		return sentences;
-	}
-
-	private static LyricParser create(LyricParser parser) throws IOException{
-		parser.parse();
-		parser.close();
-		return parser;
 	}
 
 	private void parseLine(String line){
@@ -115,61 +181,13 @@ public class LyricParser{
 		sentences=null;
 	}
 
-	private boolean isNumber(String str){
-		Matcher isNum=numberPattern.matcher(str);
-		return isNum.matches();
-	}
-
-	/**
-	 * 2 types of results: [by:Creator of the LRC file] => {"by","Creator of the LRC file"} [00:12.00]Line 1 lyrics
-	 * =>{"12000","Line 1 lyrics"} checked if "12000" is number;
-	 * 
-	 * @param line
-	 * @return
-	 * @throws LyricParseException
-	 */
-	private String[] extractTime(String line) throws LyricParseException{
-		int posBracketRight=checkLine(line);
-		String time=line.substring(1,posBracketRight);
-
-		String[] ts=time.split("\\:",2);
-		if (ts.length<2){
-			throw new LyricParseException(line);
-		}
-		String[] result=new String[2];
-		if (isNumber(ts[0])){
-			result[0]=parseTime(ts)+"";
-			result[1]=line.substring(posBracketRight+1);
-		}else if (!isNumber(ts[0])){
-			result=ts;
-		}
-		return result;
-	}
-
-	/**
-	 * @param line
-	 * @return the position of "]" in the line
-	 * @throws LyricParseException
-	 *             if "[" is not the begining and "]" is not found;
-	 */
-	private int checkLine(String line) throws LyricParseException{
-		if (line.length()<3||!"[".equals(line.substring(0,1))){
-			throw new LyricParseException(line);
-		}
-		int posBracketRight=line.indexOf("]");
-		if (posBracketRight<2){
-			throw new LyricParseException(line);
-		}
-		return posBracketRight;
-	}
-
 	/**
 	 * @param ts
 	 *            time components format like 00:15.30
 	 * @return long milliseconds
 	 * @throws LyricParseException
 	 */
-	private long parseTime(String[] ts) throws LyricParseException{
+	public static long parseTime(String[] ts) throws LyricParseException{
 		double seconds;
 		try{
 			seconds=Double.parseDouble(ts[1]);
@@ -178,23 +196,6 @@ public class LyricParser{
 		}
 		double s=Integer.parseInt(ts[0])*60+seconds;
 		return Math.round(s*1000);
-	}
-
-	/**
-	 * exception to indicate error to parse a line
-	 * 
-	 * @author authorfu
-	 */
-	private static class LyricParseException extends Exception{
-		public LyricParseException(String line){
-			super(line);
-		}
-
-		private static final long serialVersionUID=-4668849369948178657L;
-	}
-
-	public Hashtable<String,String> getTags(){
-		return tags;
 	}
 
 }

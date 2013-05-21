@@ -19,12 +19,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
 
 import com.github.authorfu.lrcparser.parser.LyricParser;
-import com.github.authorfu.lrcparser.parser.Sentence;
 
 /**
  * @author authorfu <br>

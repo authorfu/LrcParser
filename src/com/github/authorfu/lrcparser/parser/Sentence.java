@@ -18,7 +18,7 @@ public class Sentence implements Serializable{
 	private long fromTime=-1;// milliseconds, sentence start include
 	private long toTime=-1;// milliseconds,sentence end time include
 	private String content="";// content of the sentence
-	private int position=1;
+	private int index=-1;//position of the sentence in the lyric
 	
 	// private final static long DISAPPEAR_TIME = 1000L;//
 
@@ -85,7 +85,7 @@ public class Sentence implements Serializable{
 	}
 
 	public String toString(){
-		return "{"+fromTime+"("+content+")"+toTime+"}";
+		return "{index:"+index+"|"+fromTime+"("+content+")"+toTime+"}";
 	}
 
 	public static class SentenceComparator implements Comparator<Sentence>{
@@ -97,12 +97,12 @@ public class Sentence implements Serializable{
 
 	}
 
-	public int getPosition(){
-		return position;
+	public int getIndex(){
+		return index;
 	}
 
-	public void setPosition(int position){
-		this.position=position;
+	public void setIndex(int index){
+		this.index=index;
 	}
 	
 	

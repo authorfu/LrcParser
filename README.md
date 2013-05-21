@@ -18,7 +18,7 @@ an introduction of LRC format can be found [here](http://en.wikipedia.org/wiki/L
 
 result:
 > [Line 1 lyrics, Line 2 lyrics, Line 3 lyrics]
-> 
+
 ####2.More info
     ArrayList<Sentence> sentences=lyric.findAllSentences(-1,-1);
     System.out.println(sentences);

@@ -1,5 +1,4 @@
 #个人简历
-
 ----------------------------
 
 ##基本信息
@@ -120,14 +119,14 @@ css：兼容ie6 7 ,使用lesscss。
 后遇公司大量裁员，改项目停止。
 
 
-###android 相关项目
-####2013 /05--至今：android MP3 应用
+###Android 相关项目
+####**2013 /05--至今**：android MP3 应用
 此项目为部门android的试水项目。
 预计于8月初发布。
 一人开发全部android端的功能。
 
-###JAVA 相关项目
-####2011 /8--2011 /10：QBT 索引 [http://www.qbtchina.com/](http://www.qbtchina.com/)
+###Java 相关项目
+####**2011 /8--2011 /10**：QBT 索引 [http://www.qbtchina.com/](http://www.qbtchina.com/)
 重写Lucene全文索引
 
 QBT（情报通）项目为淘宝的爬虫的实现，收入完整的淘宝数据量。

@@ -34,22 +34,20 @@
 
 ####**2012 /06--2012 /12**：傲娇猫项目 [http://www.aojiaomao.com](http://www.aojiaomao.com)
 
-傲娇猫是一个仿照[美丽说](http://www.meilishuo.com "美丽说")的网站
-构架设计为百万级的访问量。之后还开发了在腾讯平台，淘宝平台上也有相关应用。
+傲娇猫是一个仿照[美丽说](http://www.meilishuo.com "美丽说")的网站，构架设计为百万级的访问量。之后还开发了在腾讯平台，淘宝平台上的相关应用。
 
-该项目公司投入大量人力，第一次尝试面向大众的网站。
+该项目公司投入了大量人力物力，第一次尝试面向大众的网站。
 
-特色为添加了情报通的数据，可以搜索任意淘宝宝贝的历史。[http://www.aojiaomao.com/isearch](http://www.aojiaomao.com/isearch)
+特色为添加了[情报通](http://www.qbtchina.com/)的数据，可以搜索任意淘宝宝贝的历史。[http://www.aojiaomao.com/isearch](http://www.aojiaomao.com/isearch)
 之后由于推广费用问题，该项目停止。
 
 数据库使用Amoeba中间层，FastDFS作为图片储存。
 
-独自一人负责后端PHP。
-扩展Yii framework，很多实用的组件一直在之后的项目中用到。
+独自一人负责后端PHP。扩展Yii framework，很多实用的组件一直在之后的项目中用到。
 
 为了追赶deadline，每周工作7*10，基本无休息日。
 
-####**2013 /03--2013 /04**：淘宝 UMP 更新
+####**2013 /03--2013 /04**：决策通 淘宝UMP模块 项目更新
 
 2012年1月到2012年2月 任务后续
 对于UMP新模块的使用。完成新的tool，实现优惠券功能。
@@ -104,7 +102,7 @@
 开发淘宝基础及高级模板
 示例店铺：
 [http://shop36839704.taobao.com](http://shop36839704.taobao.com "http://shop36839704.taobao.com")
-责任描述： 	该项目一人负责全部实现，从客户沟通，到切图，到最后的代码实现。
+责任描述：   该项目一人负责全部实现，从客户沟通，到切图，到最后的代码实现。
 
 css：兼容ie6 7 ,使用lesscss。
 

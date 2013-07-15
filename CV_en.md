@@ -10,7 +10,7 @@
 - fujiayi1984@gmail.com
 - QQ: 744734320
 - Available period：15, August. It's the end of current contract. 
-- 
+
 ##Skills and competence
 - Two years experience
 - Proficient in PHP and Yii framework
@@ -22,7 +22,7 @@
 
 ##Objective
 - To seek a full time position of Web Backend 
-- Preference of 130,000  annual salary 
+- Preference of 130,000  annual salary (Current salary :9600 per month) 
 
 ###
 -----------------------------------------------------------------

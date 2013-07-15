@@ -2,32 +2,32 @@
 ----------------------------
 
 ##Personal Data
-- Fu jia-yi , male, shanghai
+- Fu jia-yi, male, Shanghai
 - 1984/08/17
-- **master** Software Computer Engineering (Genie Informatique Logicielle
-- Gradated at universite of Rouen, Frence
+- **master** Software Computer Engineering (Genie Informatique Logicielle)
+- Gradated at universite of Rouen, France
 - tel: **18721588108**
 - fujiayi1984@gmail.com
 - QQ: 744734320
-- Available period： 15,August, the end of current contract 
+- Available period：15, August. It's the end of current contract. 
 - 
 ##Skills and competence
 - Two years experience
-- Proficient in php, yii framework
-- Proficient in css javascript
-- Proficient in java
-- Proficient in mysql sqlite
-- Experienced in android
-- Experienced in redis memcached beanstalk sphinx nginx apache
+- Proficient in PHP and Yii framework
+- Proficient in CSS Javascript
+- Proficient in Java
+- Proficient in Mysql, Sqlite
+- Experienced in Android
+- Experienced in Redis, Memcached, Beanstalk, Sphinx, Nginx, Apache
 
 ##Objective
 - To seek a full time position of Web Backend 
-- Preference of 130 thousand annual salary 
+- Preference of 130,000  annual salary 
 
 ###
 -----------------------------------------------------------------
 ##Working Experience
-**2011 /08 -- now**：[adways](http://dev.adways.net/ "Adways"),shanghai LTD（200人）
+**2011 /08 -- now**：[adways](http://dev.adways.net/ "Adways"),Shanghai LTD（200人）
 
 ##Project Experience
 ###PHP Yii Framework Related
@@ -75,7 +75,7 @@ I was alone to be responable of PHP Backend . I began to do a deep thinking of Y
 By analysing the data of a TAOBAO shop in 2 years , the programme try to find Cross-Buyings of their customs.
 Realization of [Algorithme Apriori](http://en.wikipedia.org/wiki/Apriori_algorithm "Apriori") in PHP. It's a realization of PHP CLI script with large data.
 
-I was familiar of REDIS ,especially SET.
+I was familiar of REDIS, especially SET.
 
 ####**2012 /01--2012 /02**：Taobao UMP SDK [http://www.taobao.com/go/act/sale/umpsy.php](http://www.taobao.com/go/act/sale/umpsy.php )
 

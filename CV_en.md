@@ -22,7 +22,7 @@
 
 ##Objective
 - To seek a full time position of Web Backend 
-- Preference of 130,000  annual salary (Current salary :9600 per month) 
+- Preference of 150,000  annual salary (Current salary :9600 per month) 
 
 ###
 -----------------------------------------------------------------

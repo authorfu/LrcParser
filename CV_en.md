@@ -27,7 +27,7 @@
 ###
 -----------------------------------------------------------------
 ##Working Experience
-**2011 /08 -- now**：[adways](http://dev.adways.net/ "Adways"),Shanghai LTD（200人）
+**2011 /08 -- now**：[adways](http://dev.adways.net/ "Adways"),Shanghai LTD（200 persons）
 
 ##Project Experience
 ###PHP Yii Framework Related

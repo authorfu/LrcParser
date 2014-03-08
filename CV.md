@@ -2,34 +2,51 @@
 ----------------------------
 
 ##基本信息
-- 傅家毅 男 上海 未婚
-- 1984/08/17
+- 傅家毅 男 上海 已婚
+- 1984/08
 - **硕士** 电子信息科学与技术
 - 毕业于法国 universite de rouen
 - tel: **18721588108**
 - fujiayi1984@gmail.com
 - QQ: 744734320
-- 到岗时间： 合同8月15日到期
 
 ##职业技能
 - 两年工作经验
-- 熟悉 php yii framework
+- 熟悉 php yii-framework magento
 - 熟悉 css javascript
 - 熟悉 java
 - 熟悉 mysql sqlite
+- 了解 zend framework
 - 了解 android
-- 了解 redis memcached beanstalk sphinx nginx apache
+- 了解 apache redis memcached beanstalk sphinx nginx 
 
-##求职意向
-- 希望能得到一份互联网的后端开发的工作。
-- 希望年薪在15W左右
 
 ###
 -----------------------------------------------------------------
 ##工作经历
-**2011 /08 -- 至今**：上海爱德威软件开发有限公司（200人）
+**2013 /09 -- 至今**：广州市思睿软件开发有限公司（上海分公司）（40人）PHP开发组组长
+**2011 /08 -- 2013 /08**：上海爱德威软件开发有限公司（200人）高级WEB开发工程师
 
 ##项目经验
+###Magento 相关项目
+####**2013 /09--2013 /12**：bestbuy项目 [http://www.5star.cn](http://www.5star.cn)
+五星电器是全球最大的零售商百思买在华的全资子公司。
+百思买退出中国后想先在电商领域再次开拓中国市场。
+
+该项目经受第三方公司的压力测试，完成优化任务。
+
+开发megento与五星ERP系统及其它第三方系统的对接，启用solr全文引擎等。
+
+####**2013 /12--至今**：kaiserkraft项目 [http://www.kaiserkraft.cn](http://www.kaiserkraft.cn)
+kaiserkraft皇加力 是德国著名的工业办公用品供应商，该网站为B2B网站。
+
+皇加力3年前由公司开发并且维护至今。
+接收皇加力时的角色为项目经理，完成客户需求的评估报价及开发。
+
+客户要求从三年前的Magento1.1.9 升级至 Magento 1.1.13。历史代码及原先对核心的大量修改，原开发人员的离职 ，使得这个项目极为复杂。对之前每一个bug的修复都用很大精力。
+
+此外督促和检查第三方hosting公司安装新版本的PHP APache及Mysql 
+
 ###PHP Yii Framework 相关项目
 
 ####**2012 /06--2012 /12**：傲娇猫项目 [http://www.aojiaomao.com](http://www.aojiaomao.com)

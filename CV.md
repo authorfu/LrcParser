@@ -5,20 +5,20 @@
 - 傅家毅 男 上海 已婚
 - 1984/08
 - **硕士** 电子信息科学与技术
-- 毕业于法国 universite de rouen
+- 毕业于法国 Universite De Rouen
 - tel: **18721588108**
 - fujiayi1984@gmail.com
 - QQ: 744734320
 
 ##职业技能
 - 两年工作经验
-- 熟悉 php yii-framework magento
-- 熟悉 css javascript
-- 熟悉 java
-- 熟悉 mysql sqlite
-- 了解 zend framework
-- 了解 android
-- 了解 apache redis memcached beanstalk sphinx nginx 
+- 熟悉 PHP YII-Framework Magento
+- 熟悉 CSS Javascript JQuery
+- 熟悉 Java
+- 熟悉 Mysql Sqlite
+- 了解 Zend Framework
+- 了解 Android
+- 了解 Apache Redis Memcached Beanstalk Sphinx Nginx 
 
 
 ###
